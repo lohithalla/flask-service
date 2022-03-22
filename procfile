@@ -1,1 +1,1 @@
-web: python service_a_app.py
+web: python service_a/service_a_app.py

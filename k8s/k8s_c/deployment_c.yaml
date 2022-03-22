@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-c
+spec:
+  selector:
+    matchLabels:
+      app: deployment_c-dep2pod-label
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deployment_c-dep2pod-label
+    spec:
+      containers:
+      - name: container-c
+        image: lohithalla4/service_c_image:latest
+        ports:
+        - containerPort: 5000
+      
+      
+

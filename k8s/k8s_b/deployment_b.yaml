@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-b
+spec:
+  selector:
+    matchLabels:
+      app: deployment_b-dep2pod-label
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deployment_b-dep2pod-label
+    spec:
+      containers:
+      - name: container-b
+        image: lohithalla4/service_b_image:latest
+        ports:
+        - containerPort: 5000
+      
+      
+
